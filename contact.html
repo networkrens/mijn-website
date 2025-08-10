@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rens Roedema — Contact</title>
+  <meta name="description" content="Neem contact op met Rens Roedema."/>
+  <meta property="og:title" content="Rens Roedema — Contact"/>
+  <meta property="og:description" content="Neem contact op met Rens Roedema."/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head><body>
+  <header class="site">
+    <div class="container nav">
+      <a class="logo" href="index.html">Rens Roedema</a>
+      <ul>
+        <li><a class="link" href="index.html">Home</a></li>
+        <li><a class="link" href="work.html">Werk</a></li>
+        <li><a class="link" href="sport.html">Sport</a></li>
+        <li><a class="link" href="about.html">Persoonlijk</a></li>
+        <li><a class="link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <section>
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <form action="mailto:rens@example.com" method="post" enctype="text/plain">
+            <div class="row">
+              <input required name="naam" placeholder="Je naam" />
+              <input required type="email" name="email" placeholder="Je e‑mail" />
+            </div>
+            <textarea required name="bericht" placeholder="Je bericht"></textarea>
+            <div style="margin-top:12px;display:flex;gap:10px">
+              <button class="btn primary" type="submit">Verstuur</button>
+              <a class="btn" href="https://wa.me/31XXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Socials</h3>
+          <p class="muted">Vul je links in:</p>
+          <p>
+            <a class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Instagram</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">GitHub / Portfolio</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="site">
+    <div class="container">© <span id="year"></span> Rens Roedema — Gemaakt met ♥</div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+
+:root{
+  --bg: #0b1020;
+  --surface: #0f1730;
+  --card: #121a36;
+  --muted: #9aa6bf;
+  --text: #e8efff;
+  --brand: #e11d48;   /* Twente rood vibe */
+  --accent: #2ea3ff;  /* De Graafschap blauw vibe */
+  --ring: rgba(46,163,255,.35);
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(46,163,255,.20), transparent 60%),
+    radial-gradient(800px 500px at -10% 20%, rgba(225,29,72,.18), transparent 60%),
+    var(--bg);
+}
+
+/* Layout */
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(9,14,28,.6);
+  backdrop-filter:saturate(1.1) blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.06)
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav .logo{font-weight:800;letter-spacing:.2px;color:var(--text);text-decoration:none}
+.nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+.nav a.link{padding:10px 12px;border-radius:12px;color:var(--muted);text-decoration:none}
+.nav a.link:hover{color:var(--text);background:rgba(255,255,255,.06)}
+.nav a.link.active{color:#08111d;background:linear-gradient(120deg,var(--brand),var(--accent))}
+
+footer.site{padding:28px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+
+/* Hero */
+.hero{
+  padding:90px 0 56px;
+  background:linear-gradient(180deg, rgba(225,29,72,.12), rgba(46,163,255,.08) 60%, transparent)
+}
+.hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:var(--muted);background:rgba(255,255,255,.03)}
+.title{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:16px 0}
+.subtitle{color:var(--muted);font-size:18px}
+.cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:16px;
+  border:1px solid rgba(255,255,255,.1);
+  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+  color:var(--text);font-weight:600;box-shadow:var(--shadow);text-decoration:none;
+  transition:transform .15s ease,border-color .15s ease
+}
+.btn:hover{border-color:rgba(255,255,255,.25);transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(120deg,var(--brand),var(--accent));color:#08111d}
+
+/* Sections & cards */
+section{padding:56px 0}
+.section-title{font-size:26px;margin:0 0 16px}
+.section-sub{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;gap:16px}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+@media (max-width: 900px){
+  .hero-inner{grid-template-columns:1fr}
+  .grid.cols-3,.grid.cols-2{grid-template-columns:1fr}
+}
+.card{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.card h3{margin:0 0 6px;font-size:18px}
+.muted{color:var(--muted)}
+
+/* Media */
+.thumb, .media{
+  width:100%;aspect-ratio:16/9;border-radius:14px;
+  background:linear-gradient(135deg, rgba(46,163,255,.18), rgba(225,29,72,.18));
+  display:grid;place-items:center;color:#08111d;font-weight:700;
+  border:1px dashed rgba(255,255,255,.2)
+}
+.gallery{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+@media (max-width: 900px){ .gallery{grid-template-columns:1fr 1fr} }
+@media (max-width: 600px){ .gallery{grid-template-columns:1fr} }
+
+/* Feature chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:var(--muted)}
+
+/* Forms */
+:focus{outline:none}
+.btn:focus, input:focus, textarea:focus{box-shadow:0 0 0 6px var(--ring)}
+form .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+form input, form textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text)}
+form textarea{min-height:120px}
+@media (max-width:700px){form .row{grid-template-columns:1fr}}
+
+/* Utility */
+hr.sep{border:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);margin:26px 0}
+.lead{font-size:18px;color:var(--muted)}

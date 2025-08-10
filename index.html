@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rens Roedema — Home</title>
+  <meta name="description" content="Portfolio en CV van Rens Roedema: logistiek medewerker & topsporter."/>
+  <meta property="og:title" content="Rens Roedema — Home"/>
+  <meta property="og:description" content="Portfolio en CV van Rens Roedema: logistiek medewerker & topsporter."/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head><body>
+  <header class="site">
+    <div class="container nav">
+      <a class="logo" href="index.html">Rens Roedema</a>
+      <ul>
+        <li><a class="link" href="index.html">Home</a></li>
+        <li><a class="link" href="work.html">Werk</a></li>
+        <li><a class="link" href="sport.html">Sport</a></li>
+        <li><a class="link" href="about.html">Persoonlijk</a></li>
+        <li><a class="link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="badge">🚀 Beschikbaar voor werk/stage</span>
+        <h1 class="title">Hoi, ik ben <span style="background:linear-gradient(120deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">Rens Roedema</span>.</h1>
+        <p class="subtitle">18 jaar uit Aalten. Logistiek medewerker (1 jaar bij Sanovo), eerder productie bij Lesli Vuurwerk en Luva Boosterfabriek. 9 jaar topsport voetbal bij FC Twente en De Graafschap. HAVO (E&M), reachtruck/pallettruck/EPT, rijbewijs in opleiding.</p>
+        <div class="cta">
+          <a class="btn primary" href="contact.html">Neem contact op</a>
+          <a class="btn" href="work.html">Bekijk mijn ervaring</a>
+        </div>
+        <hr class="sep">
+        <div class="chips">
+          <span class="chip">HAVO (E&M)</span>
+          <span class="chip">Reachtruck</span>
+          <span class="chip">Pallettruck</span>
+          <span class="chip">EPT</span>
+          <span class="chip">Rijbewijs (bezig)</span>
+        </div>
+      </div>
+      <div class="avatar-card">
+        <img class="avatar" src="assets/img/profielfoto.svg" alt="Profielfoto">
+        <div style="margin-top:12px;color:var(--muted);font-size:14px">Vervang <code>assets/img/profielfoto.svg</code> door jouw echte foto.</div>
+      </div>
+    </div>
+  </main>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Bekende plekken uit mijn reis</h2>
+      <p class="section-sub">Vervang de thumbnails door foto’s/logos van jouw clubs en werkgevers.</p>
+      <div class="grid cols-3">
+        <article class="card"><img class="media" src="assets/img/logos/fc-twente.svg" alt="FC Twente"><h3>FC Twente</h3><p class="muted">9 jaar jeugd/talentontwikkeling.</p></article>
+        <article class="card"><img class="media" src="assets/img/logos/de-graafschap.svg" alt="De Graafschap"><h3>De Graafschap</h3><p class="muted">Discipline, teamwork en doorzettingsvermogen.</p></article>
+        <article class="card"><img class="media" src="assets/img/logos/sanovo.svg" alt="Sanovo"><h3>Sanovo</h3><p class="muted">Logistiek medewerker — 1 jaar.</p></article>
+      </div>
+    </div>
+  </section>
+  <footer class="site">
+    <div class="container">© <span id="year"></span> Rens Roedema — Gemaakt met ♥</div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
